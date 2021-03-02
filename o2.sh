@@ -12,7 +12,6 @@ requires:
   - Configuration
   - Monitoring
   - ms_gsl
-  - FairMQ
   - "curl:(?!slc8)"
   - "system-curl:slc8.*"
   - MCStepLogger
@@ -28,6 +27,7 @@ requires:
   - KFParticle
   - VecGeom
 build_requires:
+  - FairMQ
   - GMP
   - MPFR
   - RapidJSON
