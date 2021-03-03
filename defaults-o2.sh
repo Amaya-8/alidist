@@ -9,8 +9,8 @@ env:
   ENABLE_VMC: "ON"
 overrides:
   GCC-Toolchain:
-    version: "v9.3.0-alice1"
-    tag: "v9.3.0-alice1"
+    version: "v9.3.0-alice2"
+    tag: "v9.3.0-alice2"
   AliRoot:
     version: "%(commit_hash)s_O2"
     requires:
