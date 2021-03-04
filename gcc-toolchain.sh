@@ -61,13 +61,11 @@ int main(void) { printf("The answer is 42.\n"); }
 EOF
 
 # GCC and deps
-pushd gcc
-  for EXT in mpfr gmp mpc isl cloog; do
-    pushd $EXT
-      autoreconf -ivf
-    popd
-  done
-popd
+[ -d gcc/mpfr ] && (cd gcc/mpfr && autoreconf -ivf)  
+[ -d gcc/gmp ] && (cd gcc/gmp && autoreconf -ivf)  
+[ -d gcc/mpc ] && (cd gcc/mpc && autoreconf -ivf)  
+[ -d gcc/isl ] && (cd gcc/isl && autoreconf -ivf)  
+[ -d gcc/cloog ] && (cd gcc/cloog && autoreconf -ivf)  
 
 mkdir build-gcc
 pushd build-gcc
